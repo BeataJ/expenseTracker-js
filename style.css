@@ -63,3 +63,11 @@ h4 {
   letter-spacing: 1px;
   margin: 5px 0;
 }
+
+.money.plus {
+  color: #2ecc71;
+}
+
+.money.mines {
+  color: #c0392b;
+}
