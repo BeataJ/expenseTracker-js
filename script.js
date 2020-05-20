@@ -12,3 +12,5 @@ const dummyTransactions = [
   { id: 3, text: 'Book', amount: -10 },
   { id: 4, text: 'Camera', amount: 150 },
 ];
+
+let transactions = dummyTransactions;
