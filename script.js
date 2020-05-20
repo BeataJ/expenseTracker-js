@@ -14,3 +14,14 @@ const dummyTransactions = [
 ];
 
 let transactions = dummyTransactions;
+
+// Add transaction to DOM list
+function addTransactionDOM(transaction) {
+  // Get sign
+  const sign = transaction.amount < 0 ? '-' : '+';
+
+  const item = document.createElement('li');
+
+  // Add class based on value
+  item.classList.add(transaction.amount < 0 ? 'minus' : 'plus');
+}
