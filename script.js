@@ -26,11 +26,20 @@ function addTransactionDOM(transaction) {
   item.classList.add(transaction.amount < 0 ? 'minus' : 'plus');
 
   item.innerHTML = `
-   ${transaction.text} <span>${sign}${Math.abs(transaction.amount)}</span>
-   <button class="delete-btn">x</button>
+    ${transaction.text} <span>${sign}${Math.abs(transaction.amount)}</span>
+    <button class="delete-btn">x</button>
   `;
 
   list.appendChild(item);
+}
+
+// Update the balance, income and expence
+function updateValue() {
+  const amounts = transactions.map((transaction) => transaction.amount);
+
+  const total = amounts.reduce((acc, item) => (acc += item), 0).toFixed(2);
+
+  console.log(total);
 }
 
 // Init app
@@ -38,6 +47,7 @@ function init() {
   list.innerHTML = '';
 
   transactions.forEach(addTransactionDOM);
+  updateValue();
 }
 
 init();
