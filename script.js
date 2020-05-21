@@ -17,7 +17,8 @@ const localStorageTransactions = JSON.parse(
   localStorage.getItem('transactions')
 );
 
-let transactions = dummyTransactions;
+let transactions =
+  localStorage.getItem('transactions') !== null ? localStorageTransactions : [];
 
 // Add transaction
 function addTransaction(e) {
