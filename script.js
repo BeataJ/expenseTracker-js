@@ -22,6 +22,13 @@ function addTransaction(e) {
   if (text.value.trim() === '' || amount.value.trim() === '') {
     alert('Please add a text and amount');
   } else {
+    const transaction = {
+      id: generateID(),
+      text: text.value,
+      amount: amount.value,
+    };
+
+    console.log(transaction);
   }
 }
 
