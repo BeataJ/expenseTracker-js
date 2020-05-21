@@ -39,6 +39,8 @@ function addTransaction(e) {
 
     updateValue();
 
+    updateLocalStorage();
+
     text.value = '';
     amount.value = '';
   }
@@ -93,6 +95,8 @@ function updateValue() {
 // Remove Transaction by ID
 function removeTransaction(id) {
   transactions = transactions.filter((transaction) => transaction.id !== id);
+
+  updateLocalStorage();
 
   init();
 }
