@@ -85,6 +85,12 @@ function updateValue() {
   money_minus.innerText = `-$${expense}`;
 }
 
+// Remove Transaction by ID
+function removeTransaction(id) {
+  transactions = transactions.filter((transaction) => transaction.id !== id);
+
+  init();
+}
 // Init app
 function init() {
   list.innerHTML = '';
