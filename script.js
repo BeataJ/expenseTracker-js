@@ -96,6 +96,12 @@ function removeTransaction(id) {
 
   init();
 }
+
+// Update local storage transactions
+function updateLocalStorage() {
+  localStorage.setItem('transactions', JSON.stringify(transactions));
+}
+
 // Init app
 function init() {
   list.innerHTML = '';
