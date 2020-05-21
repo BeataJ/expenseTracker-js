@@ -63,3 +63,5 @@ function init() {
 }
 
 init();
+
+form.addEventListener('submit', addTransaction);
